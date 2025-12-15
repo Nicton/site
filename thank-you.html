@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Спасибо за бронирование | Asmalouski</title>
+  <meta name="description" content="Подтверждение бронирования мастер-класса. Что дальше: отправить идею, адрес, подготовка." />
+  <style>
+    :root { --max: 720px; --pad: 16px; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.45; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 24px var(--pad); }
+    section { padding: 18px 0; border-top: 1px solid rgba(0,0,0,.08); }
+    h1 { margin:0 0 10px; font-size: 1.8rem; line-height:1.15; }
+    .muted { opacity:.78; }
+    .btn { display:inline-block; padding: 12px 14px; border: 1px solid #111; border-radius: 10px; text-decoration:none; }
+    .btn-primary { background:#111; color:#fff; }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Спасибо за бронирование!</h1>
+      <p class="muted">Мы отправили подтверждение на почту. Ниже — простой чек-лист, чтобы всё прошло идеально.</p>
+    </header>
+
+    <section aria-labelledby="next-title">
+      <h2 id="next-title">Что дальше</h2>
+      <ol>
+        <li>В течение нескольких минут придёт письмо с подтверждением.</li>
+        <li>Не позднее чем за 3 дня до мастер-класса пришлите вашу идею (фото/набросок/описание).</li>
+        <li>Приходите за 10 минут до начала.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="details-title">
+      <h2 id="details-title">Ваш мастер-класс</h2>
+      <ul>
+        <li><strong>Город:</strong> {{city_name}}</li>
+        <li><strong>Дата и время:</strong> {{date}} • {{time}}</li>
+        <li><strong>Адрес:</strong> <a href="{{maps_url}}" target="_blank" rel="noopener noreferrer">{{address_text}}</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="prep-title">
+      <h2 id="prep-title">Подготовка</h2>
+      <ul>
+        <li>Удобная одежда.</li>
+        <li>Длинные волосы: резинка.</li>
+        <li>Если хотите камни — приносите свои.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="casting-title">
+      <h2 id="casting-title">Важно про отлив</h2>
+      <p>После мастер-класса мы оценим вес и обсудим точную стоимость отлива. Производство занимает 4–6 недель.</p>
+      <p><a class="btn" href="/pricing-casting">Посмотреть ориентиры по ценам</a></p>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Контакты</h2>
+      <p>Instagram: <a href="{{instagram_url}}">{{instagram_handle}}</a></p>
+      <p>E-mail: <a href="mailto:{{email}}">{{email}}</a></p>
+
+      <p>
+        <a class="btn btn-primary" href="{{send_idea_url}}">Отправить идею</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

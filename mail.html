@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Подтверждение мастер-класса</title>
+  <style>
+    body { margin:0; background:#ffffff; font-family: Arial, sans-serif; color:#111; }
+    .wrap { width:100%; max-width: 640px; margin:0 auto; padding: 18px 16px; }
+    .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 16px; }
+    h1 { font-size: 18px; margin: 0 0 10px; }
+    p { margin: 10px 0; line-height: 1.45; }
+    ul { margin: 10px 0; padding-left: 18px; }
+    .muted { color:#444; }
+    .btn { display:inline-block; padding: 10px 12px; border-radius: 10px; border: 1px solid #111; text-decoration:none; }
+    .btn-primary { background:#111; color:#fff; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Подтверждение мастер-класса — {{city_name}}, {{date}}</h1>
+
+      <p>Здравствуйте, {{first_name}}.</p>
+
+      <p>Спасибо за бронирование мастер-класса “Моделирование из ювелирного воска”.</p>
+
+      <p><strong>Детали:</strong></p>
+      <ul>
+        <li>Город: {{city_name}}</li>
+        <li>Дата и время: {{date}} • {{time}}</li>
+        <li>Адрес: <a href="{{maps_url}}" target="_blank" rel="noopener noreferrer">{{address_text}}</a></li>
+      </ul>
+
+      <p><strong>Просьба:</strong> пришлите идею не позднее чем за 3 дня до мастер-класса (фото / набросок / описание).</p>
+
+      <p>
+        <a class="btn btn-primary" href="{{send_idea_url}}">Отправить идею</a>
+        <span class="muted">&nbsp;&nbsp;или напишите в Instagram: <a href="{{instagram_url}}">{{instagram_handle}}</a></span>
+      </p>
+
+      <p class="muted">
+        Важно: точную стоимость отлива в металле называем после мастер-класса, когда известен вес изделия. Срок изготовления: 4–6 недель.
+      </p>
+
+      <p class="muted">До встречи,<br/>Команда Asmalouski</p>
+    </div>
+  </div>
+</body>
+</html>
