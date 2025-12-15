@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Мастер-классы по воску — Asmalouski</title>
+  <meta name="description" content="Ювелирный мастер-класс: моделирование из ювелирного воска. Без опыта. Камерная группа. Отлив в металле через 4–6 недель." />
+
+  <!-- Minimal mobile-first base; UI/брендинг добавите позже -->
+  <style>
+    :root { --max: 720px; --pad: 16px; --gap: 12px; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.45; }
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 24px var(--pad); }
+    header { padding: 12px 0 0; }
+    nav a { margin-right: 10px; opacity: .85; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .hero { padding: 18px 0 10px; }
+    .lead { font-size: 1.05rem; opacity: .92; }
+    .facts { padding: 0; margin: 14px 0 0; }
+    .facts li { margin: 6px 0; }
+    .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 0; }
+    .btn { display: inline-block; padding: 12px 14px; border: 1px solid #111; border-radius: 10px; text-decoration: none; }
+    .btn-primary { background: #111; color: #fff; }
+    .btn-ghost { background: transparent; }
+    section { padding: 18px 0; border-top: 1px solid rgba(0,0,0,.08); }
+    h1 { margin: 0 0 8px; font-size: 1.7rem; line-height: 1.15; }
+    h2 { margin: 0 0 10px; font-size: 1.25rem; }
+    h3 { margin: 14px 0 6px; font-size: 1.05rem; }
+    .muted { opacity: .78; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
+    .card { border: 1px solid rgba(0,0,0,.12); border-radius: 14px; padding: 14px; }
+    .card h3 { margin-top: 0; }
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(0,0,0,.12); font-size: .92rem; }
+    details { border: 1px solid rgba(0,0,0,.10); border-radius: 12px; padding: 10px 12px; }
+    details + details { margin-top: 10px; }
+    summary { cursor: pointer; font-weight: 600; }
+    .sticky { position: sticky; bottom: 10px; padding: 0 var(--pad); }
+    .sticky .btn { width: 100%; text-align: center; border-radius: 14px; }
+    footer { padding: 22px 0 10px; opacity: .85; font-size: .95rem; }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="wrap">
+    <nav aria-label="Навигация">
+      <a href="/wax-master-classes">Мастер-классы</a>
+      <a href="/pricing-casting">Цены отливов</a>
+      <a href="/gift-certificate">Ваучер</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="top">
+      <h1>Мастер-класс по ювелирке: моделирование из ювелирного воска</h1>
+      <p class="lead">Создайте своё украшение своими руками. Без опыта. В камерной группе и под руководством профессиональных ювелиров.</p>
+
+      <div class="cta-row" role="group" aria-label="Основные действия">
+        <a class="btn btn-primary" href="#cities" data-analytics-id="click_primary_cta" data-placement="hero">Выбрать город и дату</a>
+        <a class="btn btn-ghost" href="#how" data-analytics-id="click_secondary_cta">Как всё проходит</a>
+      </div>
+
+      <ul class="facts">
+        <li>Уровень: опыт не нужен (ведём пошагово).</li>
+        <li>Формат: 1 день / 2,5 часа • группа до 8 человек.</li>
+        <li>Можно сделать: кольца, подвески, серьги, браслеты.</li>
+        <li>Результат: восковая модель + отлив в металле через 4–6 недель.</li>
+        <li>Средняя стоимость отлива в серебре: около 200 zł (зависит от веса).</li>
+      </ul>
+    </section>
+
+    <section id="cities" aria-labelledby="cities-title">
+      <h2 id="cities-title">Выберите мастер-класс в своём городе</h2>
+      <p class="muted">Выберите город, посмотрите ближайшую доступную дату и забронируйте место.</p>
+
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Варшава</h3>
+          <p class="muted">Ближайшая дата: <strong>{{nearest_date_warsaw}}</strong> • <strong>{{nearest_time_warsaw}}</strong></p>
+          <p><span class="pill">{{availability_warsaw}}</span></p>
+          <p><a class="btn btn-primary" href="/wax-master-classes/warszawa" data-analytics-id="select_city" data-city="warszawa">Посмотреть даты</a></p>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Гданьск</h3>
+          <p class="muted">Ближайшая дата: <strong>{{nearest_date_gdansk}}</strong> • <strong>{{nearest_time_gdansk}}</strong></p>
+          <p><span class="pill">{{availability_gdansk}}</span></p>
+          <p><a class="btn btn-primary" href="/wax-master-classes/gdansk" data-analytics-id="select_city" data-city="gdansk">Посмотреть даты</a></p>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Краков</h3>
+          <p class="muted">Ближайшая дата: <strong>{{nearest_date_krakow}}</strong> • <strong>{{nearest_time_krakow}}</strong></p>
+          <p><span class="pill">{{availability_krakow}}</span></p>
+          <p><a class="btn btn-primary" href="/wax-master-classes/krakow" data-analytics-id="select_city" data-city="krakow">Посмотреть даты</a></p>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Вроцлав</h3>
+          <p class="muted">Ближайшая дата: <strong>{{nearest_date_wroclaw}}</strong> • <strong>{{nearest_time_wroclaw}}</strong></p>
+          <p><span class="pill">{{availability_wroclaw}}</span></p>
+          <p><a class="btn btn-primary" href="/wax-master-classes/wroclaw" data-analytics-id="select_city" data-city="wroclaw">Посмотреть даты</a></p>
+        </article>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3>Если мест нет</h3>
+        <ul>
+          <li>Запишитесь в лист ожидания — сообщим о новых датах.</li>
+          <li>Посмотрите другой город.</li>
+          <li>Возьмите ваучер в подарок.</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="{{waitlist_url}}" data-analytics-id="join_waitlist">Лист ожидания</a>
+          <a class="btn btn-ghost" href="/gift-certificate">Ваучер</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <h2 id="how-title">Как это проходит</h2>
+
+      <h3>Ваша идея</h3>
+      <p>До мастер-класса пришлите идею будущего изделия: фото из интернета, набросок или описание. Можно отправить в Instagram или на e-mail.</p>
+
+      <h3>Создание модели</h3>
+      <p>Мы работаем с ювелирным воском — он пластичный, легко режется и формуется. Мы подскажем, как добиться лучшего результата.</p>
+
+      <h3>Мини-лекции по теме</h3>
+      <p>В процессе рассказываем о драгоценных металлах, камнях и производстве — ровно то, что помогает вам в работе.</p>
+
+      <h3>Работа с огнём</h3>
+      <p>Под нашим контролем вы расплавите серебро и зальёте его в песчаную форму, создав первичный отлив. Это один из самых впечатляющих моментов мастер-класса.</p>
+
+      <h3>Разбор работы и расчёт отлива</h3>
+      <p>В конце мы рассчитаем прогнозный вес изделия в металле. Вы выбираете: делать отлив в металле или оставить восковую модель как памятный объект.</p>
+
+      <p class="muted"><strong>Металлы для отлива:</strong> серебро; золото (жёлтое/белое/розовое, 585 или 750); серебро + позолота; латунь.</p>
+      <p><strong>Важно:</strong> за металл и отлив есть доплата — она зависит от выбранного металла и веса готового изделия.</p>
+
+      <h3>Литейное производство (4–6 недель)</h3>
+      <p>Восковые модели мы отвозим в нашу мастерскую в Кракове. Этот этап технологически сложный и небезопасный.</p>
+
+      <h3>Финальная обработка</h3>
+      <p>После отлива доводим поверхность до “носибельного” результата. Финиш подбираем под характер проекта. При желании вы сможете доработать изделие вместе с нами, когда оно будет готово.</p>
+
+      <h3>Доставка</h3>
+      <p>Мы можем передать изделие лично при следующей поездке в ваш город или отправить доставкой. Доставка по PL и UA: бесплатная (до 3 рабочих дней).</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#cities" data-analytics-id="click_primary_cta" data-placement="how">Выбрать город и дату</a>
+        <a class="btn btn-ghost" href="/pricing-casting" data-analytics-id="view_pricing_casting">Цены отливов</a>
+      </div>
+    </section>
+
+    <section id="pricing" aria-labelledby="pricing-title">
+      <h2 id="pricing-title">Вес и стоимость отливов</h2>
+      <p>Хотите заранее понимать бюджет? Посмотрите примеры веса и ориентиры стоимости для типовых изделий.</p>
+      <p><a class="btn btn-primary" href="/pricing-casting">Посмотреть примеры и цены отливов</a></p>
+    </section>
+
+    <section id="works" aria-labelledby="works-title">
+      <h2 id="works-title">Работы участников</h2>
+      <p class="muted">Здесь будет галерея (добавите UI позже). Можно оставить ссылку на Telegram/Instagram с примерами.</p>
+      <p><a class="btn btn-ghost" href="{{telegram_gallery_url}}">Посмотреть больше работ (Telegram)</a></p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Частые вопросы</h2>
+
+      <details>
+        <summary data-analytics-id="expand_faq" data-question-id="prep">Как подготовиться?</summary>
+        <p>Придумайте, что хотите сделать, и пришлите идею за 3 дня до мастер-класса. Одежда — удобная; воск легко удаляется. Длинные волосы — возьмите резинку (безопасность).</p>
+      </details>
+
+      <details>
+        <summary data-analytics-id="expand_faq" data-question-id="delivery_time">Когда я получу готовое изделие?</summary>
+        <p>Через 4–6 недель после мастер-класса.</p>
+      </details>
+
+      <details>
+        <summary data-analytics-id="expand_faq" data-question-id="idea">Как сформулировать идею?</summary>
+        <p>Подойдёт фото, набросок или описание. Сложно за одну сессию: подвижные элементы, очень тонкие части, мелкие детали &lt;0,3 мм, точная геометрия, цепочки и т. п. Если нужно — поможем доработать идею после мастер-класса (доп. услуга).</p>
+      </details>
+
+      <details>
+        <summary data-analytics-id="expand_faq" data-question-id="languages">На каких языках проходит?</summary>
+        <p>Польский, английский, украинский, русский.</p>
+      </details>
+
+      <details>
+        <summary data-analytics-id="expand_faq" data-question-id="stones">Можно ли вставить камни?</summary>
+        <p>Да. У нас есть цирконы и Swarovski; можно принести свои камни.</p>
+      </details>
+
+      <details>
+        <summary data-analytics-id="expand_faq" data-question-id="gold_price">Сколько стоит отлив из золота?</summary>
+        <p>Зависит от веса, пробы и цвета. Ставки за грамм смотрите на странице “Цены отливов”. Точную цену называем, когда известен вес после мастер-класса.</p>
+      </details>
+    </section>
+
+    <footer>
+      <p><strong>Есть вопрос перед бронированием?</strong> Напишите в Instagram или на e-mail.</p>
+      <p class="muted">
+        Instagram: <a href="{{instagram_url}}" data-analytics-id="contact_intent" data-channel="instagram">{{instagram_handle}}</a><br/>
+        E-mail: <a href="mailto:{{email}}" data-analytics-id="contact_intent" data-channel="email">{{email}}</a>
+      </p>
+    </footer>
+  </main>
+
+  <!-- Optional sticky CTA on mobile; can be removed if you prefer -->
+  <div class="sticky" aria-hidden="false">
+    <a class="btn btn-primary" href="#cities" data-analytics-id="click_primary_cta" data-placement="sticky">Выбрать город и дату</a>
+  </div>
+</body>
+</html>
